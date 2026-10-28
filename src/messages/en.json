@@ -1,0 +1,191 @@
+{
+  "common": {
+    "companyName": "MRAN Sports Investment Group",
+    "shortName": "MRAN",
+    "tagline": "Building the Human Before the Athlete… Crafting Sports with Professionalism",
+    "phone": "01551146629",
+    "phoneFormatted": "+20 155 114 6629",
+    "email": "contact@mransports.com",
+    "address": "Cairo, Egypt - Corporate Headquarters & Strategic Branch Network",
+    "hours": "Saturday to Thursday: 9:00 AM – 10:00 PM | Friday: 1:00 PM – 10:00 PM",
+    "allRightsReserved": "All Rights Reserved © {year} MRAN Sports Investment Group.",
+    "exploreMore": "Explore More",
+    "getInTouch": "Get in Touch",
+    "registerNow": "Register Now",
+    "requestConsultation": "Request Trial Session",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "close": "Close",
+    "downloadPdf": "Download Report (PDF)",
+    "scanQr": "Scan QR to Connect",
+    "sportsInvestment": "Sports Investment & Academies"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About MRAN",
+    "companies": "Academies & Sectors",
+    "chairman": "Chairman & Vision",
+    "branches": "Hubs & Facilities",
+    "contact": "Contact Us",
+    "toggleTheme": "Toggle Theme",
+    "switchLang": "العربية"
+  },
+  "hero": {
+    "badge": "🏆 Pioneer in Sports Investment & Athletic Development in Egypt",
+    "titlePrefix": "Building the Human Before the Athlete",
+    "titleHighlight": "Crafting Sports with Professionalism",
+    "description": "An integrated training and sports investment ecosystem dedicated to elevating athletic talent, physical fitness, and balanced personal discipline across all age groups through world-class technical standards.",
+    "ctaPrimary": "Explore Academies & Programs",
+    "ctaSecondary": "Contact Management"
+  },
+  "tournament": {
+    "liveBadge": "Official Football Tournament | Egypt Masters League",
+    "titlePrefix": "Egypt Masters League",
+    "titleHighlight": "EML Championship",
+    "tagline": "The pitch awaits you! Join us at Champions Arena for the ultimate showdown.",
+    "venueLabel": "Venue & Location",
+    "venueValue": "Champions Arena - 8th District, Nasr City, Cairo",
+    "timeLabel": "Kick-off Time",
+    "timeValue": "7:00 PM",
+    "ageLabel": "Age Category",
+    "ageValue": "Ages 30 - 40 (Masters & Veterans)",
+    "prizeLabel": "Grand Prizes",
+    "prizeValue": "100,000 EGP for Champions + Major Team Prizes",
+    "ctaFacebook": "Watch Tournament Reel on Facebook",
+    "ctaRegister": "Register Your Team via WhatsApp",
+    "hotlineNotice": "Quick Hotline & WhatsApp Registration:",
+    "viewPoster": "View Official Poster"
+  },
+  "about": {
+    "pill": "Our Identity & Mission",
+    "heading": "An Advanced Athletic Ecosystem Shaping Tomorrow's Champions",
+    "lead": "MRAN Sports Academy specializes in sports coaching and physical development across all age groups, operating through an integrated methodology that fuses structured discipline, technical mastery, and holistic personal growth.",
+    "visionTitle": "Strategic Orientation & Vision",
+    "visionDesc": "Delivering a progressive athletic development model aimed at honing technical skills, boosting physical conditioning, and molding well-rounded individuals within safe, inspiring, and fully equipped facilities.",
+    "communityTitle": "Family & Community Synergy",
+    "communityDesc": "We place paramount emphasis on our societal mission by fostering family sports participation, cultivating health-conscious generations, and building strategic alliances with national institutions and clubs.",
+    "valuesHeading": "Institutional Core Values",
+    "valuesSub": "The guiding cornerstones driving MRAN's operational and training excellence:",
+    "values": [
+      {
+        "title": "High Quality & Professionalism",
+        "desc": "Adhering to certified athletic standards through accredited coaching staff and modern development regimens."
+      },
+      {
+        "title": "Continuous Innovation & Evolution",
+        "desc": "Regularly updating coaching methodologies with motion analysis and biometric performance tracking."
+      },
+      {
+        "title": "Flexibility & Diverse Solutions",
+        "desc": "Offering adaptable schedules and tailored regimens accommodating diverse physical capacities and family routines."
+      },
+      {
+        "title": "Enhancing Individual Skills",
+        "desc": "Targeting individual strengths and systematically improving tactical cognition, endurance, and mental agility."
+      },
+      {
+        "title": "Fostering Positive Competition",
+        "desc": "Instilling sportsmanship, mutual respect, and high-performance drive within healthy competitive environments."
+      },
+      {
+        "title": "Uncompromising Team Spirit",
+        "desc": "Aligning coaches, athletes, and families into a supportive collective pursuing common aspirations."
+      }
+    ],
+    "targetPill": "Target Demographics",
+    "targets": [
+      {
+        "name": "Children & Juniors",
+        "desc": "Foundational motor skills, neuromuscular coordination, and inspiring a lifelong passion for physical activity."
+      },
+      {
+        "name": "Youth & Teenagers",
+        "desc": "Advanced tactical acumen, elite conditioning, and competitive pathway qualification for tournaments."
+      },
+      {
+        "name": "Adults & Enthusiasts",
+        "desc": "Functional fitness, cardiovascular endurance, stress relief, and sustainable lifestyle optimization."
+      },
+      {
+        "name": "Families & Communities",
+        "desc": "Inclusive community sporting events, shared recreational days, and healthy family fitness programs."
+      }
+    ]
+  },
+  "subsidiaries": {
+    "pill": "Divisions & Academies",
+    "heading": "MRAN Sports Group Academies & Sectors",
+    "sub": "Dedicated athletic academies covering pivotal Olympic and modern sports with cutting-edge facilities",
+    "filterAll": "All Sectors",
+    "viewDetails": "View Sector Details",
+    "exploreSubsidiary": "Official Academy Page",
+    "requestQuote": "Request Trial Session / Registration",
+    "specsLabel": "Technical Specs & Accreditations",
+    "branchesLabel": "Available Hubs",
+    "ageGroups": "Age Categories",
+    "trainingSystem": "Training System",
+    "coachingStaff": "Coaching Cadre"
+  },
+  "branches": {
+    "pill": "Geographic Footprint",
+    "heading": "Strategic Network of Athletic Facilities Across Cairo",
+    "sub": "Modern, safe, and fully equipped training grounds located in key residential and developmental hubs",
+    "helwan": "Helwan - Military Factory Club",
+    "nasrCity": "Nasr City",
+    "badr": "Badr City",
+    "october": "October Gardens",
+    "mostakbal": "Mostakbal City",
+    "sportsAvailable": "Available Disciplines"
+  },
+  "chairman": {
+    "pill": "Executive Leadership",
+    "title": "Message from the Chairman",
+    "name": "Mr/ Mahmoud Ramadan",
+    "role": "Chairman of the Board, MRAN Sports Investment Group",
+    "quote": "Building resilient generations begins with instilling discipline and athletic passion within sound educational and ethical grounds. At MRAN, we do not simply train players; we build leaders equipped with determination and character to shape a vibrant future.",
+    "bioLead": "A national investment vision centered on making sports a foundational lifestyle and developing resilient athletic infrastructure.",
+    "bioP1": "MRAN Sports Investment was launched with a distinct vision to modernize Egypt's athletic academy ecosystem and sports facility management, harmonizing modern technical frameworks with deep-seated institutional integrity.",
+    "bioP2": "We have established pivotal institutional partnerships with reputable national entities, most notably our fruitful collaboration with the Military Factory Club in Helwan, alongside our expansive footprint across New Cairo, Nasr City, Badr City, October Gardens, and Mostakbal City.",
+    "bioP3": "Believing that human capital is the highest yield investment, our multi-year blueprint expands into additional governorates while scaling Olympic and modern sports such as Padel, Football, and Martial Arts, squarely in alignment with Egypt's Vision 2030 for sustainable sports culture.",
+    "pillarsTitle": "Strategic Leadership Pillars",
+    "affiliationsTitle": "Key Accreditations & Official Alliances"
+  },
+  "contact": {
+    "pill": "Contact Us",
+    "heading": "Ready to Embark on Your Athletic Journey?",
+    "sub": "Our team is ready to assist you regarding academy enrollments, facility memberships, and corporate sponsorships",
+    "formTitle": "Send an Inquiry or Registration Request",
+    "formSub": "Complete the form below and an athletic advisor will follow up within 24 hours.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "e.g., Mohamed Ahmed",
+    "phoneLabel": "Phone Number / WhatsApp",
+    "phonePlaceholder": "01X XXXX XXXX",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "name@example.com",
+    "branchLabel": "Preferred Facility / Hub",
+    "branchSelect": "Select nearest branch",
+    "sportLabel": "Sport / Academy Program",
+    "sportSelect": "Select sport discipline",
+    "ageLabel": "Trainee Age Group",
+    "ageSelect": "Select age bracket",
+    "messageLabel": "Your Message / Notes",
+    "messagePlaceholder": "Provide any questions or details about your athletic goals...",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "successTitle": "Inquiry Submitted Successfully!",
+    "successMessage": "Thank you for reaching out to MRAN Sports. An advisor will contact you shortly.",
+    "headquartersTitle": "Corporate Headquarters",
+    "headquartersAddress": "Helwan Military Factory Club, Cairo, Egypt",
+    "hotlineTitle": "Direct Hotline & Inquiries",
+    "directPhone": "+20 155 114 6629",
+    "emailTitle": "Official Inquiries",
+    "workingHoursTitle": "Operating & Reception Hours",
+    "socialQrTitle": "Official Social Media & Channels",
+    "scanToFollow": "Scan the official QR code to follow updates and tournament streams"
+  },
+  "qrModal": {
+    "title": "Scan QR for Direct Channel Access",
+    "description": "Point your phone camera at the code to access our official social channel directly",
+    "openDirectly": "Open Link Directly"
+  }
+}
