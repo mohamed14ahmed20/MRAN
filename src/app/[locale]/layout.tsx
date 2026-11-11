@@ -103,6 +103,7 @@ export default async function LocaleLayout({
     address: (messages as any)?.common?.address || 'القاهرة، جمهورية مصر العربية',
     hours: (messages as any)?.common?.hours || 'السبت إلى الخميس: 9:00 ص – 10:00 م',
     allRightsReserved: (messages as any)?.common?.allRightsReserved || 'جميع الحقوق محفوظة © {year} مران للإستثمار الرياضي.',
+    mrgAffiliation: (messages as any)?.common?.mrgAffiliation || (isArabic ? 'تابعة لشركة MRG' : 'A subsidiary of MRG'),
     home: (messages as any)?.nav?.home || 'الرئيسية',
     about: (messages as any)?.nav?.about || 'عن مران',
     companies: (messages as any)?.nav?.companies || 'أكاديمياتنا',

@@ -4,7 +4,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { QrCodeModal } from './QrCodeModal';
-import { Phone, Mail, MapPin, Clock, QrCode, ArrowUp, ChevronRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, QrCode, ArrowUp, ChevronRight, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   locale: string;
@@ -22,6 +22,7 @@ interface FooterProps {
     companies: string;
     chairman: string;
     contact: string;
+    mrgAffiliation?: string;
   };
 }
 
@@ -89,6 +90,26 @@ export function Footer({ locale, labels }: FooterProps) {
                   </p>
                 </div>
               </Link>
+
+              {/* MRG Affiliation Link */}
+              <div className="pt-0.5">
+                <a
+                  href="https://www.mrgeg.com/en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 hover:border-mran-red-500/50 text-xs text-slate-300 transition-all group/mrg shadow-sm"
+                  title={isArabic ? 'زيارة موقع شركة MRG' : 'Visit MRG website'}
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-mran-red-500 group-hover/mrg:scale-125 transition-transform" />
+                  <span className="text-slate-300">
+                    {isArabic ? 'تابعة لشركة' : 'A subsidiary of'}
+                  </span>
+                  <span className="font-bold text-white group-hover/mrg:text-mran-red-400 transition-colors">
+                    MRG
+                  </span>
+                  <ExternalLink className="w-3 h-3 text-slate-400 group-hover/mrg:text-mran-red-400 transition-colors" />
+                </a>
+              </div>
               <p className="text-sm text-slate-400 leading-relaxed italic">
                 &ldquo;{labels.tagline}&rdquo;
               </p>
@@ -267,8 +288,23 @@ export function Footer({ locale, labels }: FooterProps) {
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>{labels.allRightsReserved.replace('{year}', String(currentYear))}</p>
+          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-start">
+              <p>{labels.allRightsReserved.replace('{year}', String(currentYear))}</p>
+              <span className="hidden sm:inline text-slate-700">•</span>
+              <p className="text-slate-400 inline-flex items-center gap-1.5">
+                <span>{isArabic ? 'تابعة لشركة' : 'A subsidiary of'}</span>
+                <a
+                  href="https://www.mrgeg.com/en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-slate-200 hover:text-mran-red-400 inline-flex items-center gap-1 transition-colors underline underline-offset-2"
+                >
+                  <span>MRG</span>
+                  <ExternalLink className="w-3 h-3 text-mran-red-400" />
+                </a>
+              </p>
+            </div>
             <div className="flex items-center gap-4">
               <span className="text-slate-400">
                 {isArabic ? 'حلوان • مدينة نصر • بدر • أكتوبر • المستقبل' : 'Helwan • Nasr City • Badr • October • Mostakbal'}
