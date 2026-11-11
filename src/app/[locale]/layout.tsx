@@ -86,6 +86,7 @@ export default async function LocaleLayout({
     about: (messages as any)?.nav?.about || (isArabic ? 'عن مران' : 'About'),
     companies: (messages as any)?.nav?.companies || (isArabic ? 'أكاديمياتنا' : 'Academies'),
     chairman: (messages as any)?.nav?.chairman || (isArabic ? 'القيادة' : 'Leadership'),
+    mrg: (messages as any)?.nav?.mrg || (isArabic ? 'تابعة لشركة MRG' : 'Subsidiary of MRG'),
     contact: (messages as any)?.nav?.contact || (isArabic ? 'اتصل بنا' : 'Contact Us'),
     phone: (messages as any)?.common?.phone || '01551146629',
     phoneFormatted: (messages as any)?.common?.phoneFormatted || '+20 155 114 6629',

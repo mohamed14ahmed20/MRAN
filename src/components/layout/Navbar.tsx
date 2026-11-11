@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Link, usePathname } from '@/i18n/routing';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { PhoneCall, Menu, X, ChevronDown } from 'lucide-react';
+import { PhoneCall, Menu, X, ChevronDown, ExternalLink } from 'lucide-react';
 
 interface NavbarProps {
   locale: string;
@@ -15,6 +15,7 @@ interface NavbarProps {
     companies: string;
     chairman: string;
     contact: string;
+    mrg?: string;
     phone: string;
     phoneFormatted: string;
     registerNow: string;
@@ -37,11 +38,16 @@ export function Navbar({ locale, labels }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { href: '/', label: labels.home },
-    { href: '/#about', label: labels.about },
-    { href: '/companies', label: labels.companies },
-    { href: '/chairman', label: labels.chairman },
-    { href: '/contact', label: labels.contact },
+    { href: '/', label: labels.home, isExternal: false },
+    { href: '/#about', label: labels.about, isExternal: false },
+    { href: '/companies', label: labels.companies, isExternal: false },
+    { href: '/chairman', label: labels.chairman, isExternal: false },
+    {
+      href: 'https://www.mrgeg.com/en',
+      label: labels.mrg || (locale === 'ar' ? 'تابعة لشركة MRG' : 'Subsidiary of MRG'),
+      isExternal: true,
+    },
+    { href: '/contact', label: labels.contact, isExternal: false },
   ];
 
   const isActive = (href: string) => {
@@ -84,20 +90,34 @@ export function Navbar({ locale, labels }: NavbarProps) {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-3.5 py-1.5 rounded-xl text-xs xl:text-sm font-bold transition-all duration-200 ${
-                  isActive(link.href)
-                    ? 'text-mran-red-700 dark:text-mran-red-400 bg-mran-red-50/90 dark:bg-mran-red-950/50 border border-mran-red-700/25 dark:border-mran-red-500/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-transparent hover:border-slate-200 dark:hover:border-slate-800 hover:bg-slate-100/80 dark:hover:bg-slate-800/60'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            {navLinks.map((link) =>
+              link.isExternal ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 xl:px-3.5 py-1.5 rounded-xl text-xs xl:text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-transparent hover:border-slate-200 dark:hover:border-slate-800 hover:bg-slate-100/80 dark:hover:bg-slate-800/60 transition-all duration-200 inline-flex items-center gap-1.5 group/mrg"
+                  title={locale === 'ar' ? 'زيارة موقع شركة MRG' : 'Visit MRG website'}
+                >
+                  <span>{link.label}</span>
+                  <ExternalLink className="w-3 h-3 text-slate-400 group-hover/mrg:text-mran-red-600 dark:group-hover/mrg:text-mran-red-400 transition-colors flex-shrink-0" />
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-2.5 xl:px-3.5 py-1.5 rounded-xl text-xs xl:text-sm font-bold transition-all duration-200 ${
+                    isActive(link.href)
+                      ? 'text-mran-red-700 dark:text-mran-red-400 bg-mran-red-50/90 dark:bg-mran-red-950/50 border border-mran-red-700/25 dark:border-mran-red-500/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-transparent hover:border-slate-200 dark:hover:border-slate-800 hover:bg-slate-100/80 dark:hover:bg-slate-800/60'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Action Tools & Hotline CTA */}
@@ -135,20 +155,34 @@ export function Navbar({ locale, labels }: NavbarProps) {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white/98 dark:bg-slate-950/98 backdrop-blur-2xl px-4 pt-3 pb-6 space-y-2 animate-fade-in shadow-xl">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-xl text-base font-semibold border transition ${
-                isActive(link.href)
-                  ? 'text-mran-red-700 dark:text-mran-red-400 bg-mran-red-50 dark:bg-mran-red-950/40 border-mran-red-700/20 dark:border-mran-red-500/20'
-                  : 'text-slate-700 dark:text-slate-200 border-transparent hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-slate-200 dark:hover:border-slate-800'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.isExternal ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold border border-transparent text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-slate-200 dark:hover:border-slate-800 transition group/mrg"
+              >
+                <span>{link.label}</span>
+                <ExternalLink className="w-4 h-4 text-slate-400 group-hover/mrg:text-mran-red-600 dark:group-hover/mrg:text-mran-red-400 transition-colors" />
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block px-4 py-3 rounded-xl text-base font-semibold border transition ${
+                  isActive(link.href)
+                    ? 'text-mran-red-700 dark:text-mran-red-400 bg-mran-red-50 dark:bg-mran-red-950/40 border-mran-red-700/20 dark:border-mran-red-500/20'
+                    : 'text-slate-700 dark:text-slate-200 border-transparent hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-slate-200 dark:hover:border-slate-800'
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
             <a
               href={`tel:${labels.phone}`}
